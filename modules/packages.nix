@@ -1,4 +1,8 @@
 { pkgs, ... }: {
+
+  # Allow non open-source packages
+  nixpkgs.config.allowUnfree = true;
+
   environment.systemPackages = [
     # GPG/SSH
     pkgs.openssh
@@ -21,8 +25,6 @@
     # C/C++/Fortran compiler toolchain
     pkgs.gcc14
     pkgs.gfortran14
-    pkgs.llvmPackages_20.stdenv
-    pkgs.llvmPackages_20.openmp
     pkgs.cmake
     pkgs.fortran-fpm
     # python
@@ -33,6 +35,7 @@
     pkgs.lua-language-server
     pkgs.pyright
     pkgs.cmake-language-server
+    pkgs.nil
     # Terminal emulator
     pkgs.wezterm
     pkgs.alacritty
@@ -40,8 +43,11 @@
     pkgs.tmux
     # Window tiling manager
     pkgs.rectangle
+    # cli password manager
+    pkgs.pass
+    pkgs.bitwarden-desktop
+    # pkgs.bitwarden-cli # currently broken; using brew formula
     # Browsing
-    pkgs.tor
     pkgs.brave
     pkgs.librewolf
     # email
@@ -52,7 +58,8 @@
     pkgs.isync
     pkgs.msmtp
     pkgs.thunderbird
-    pkgs.protonmail-bridge
+    # Graph visualization tools
+    pkgs.graphviz
     # Microsoft garbage software I am forced to use
     pkgs.teams
     # Local LLM inference interface
@@ -60,6 +67,8 @@
     # .md, .qmd notes/notebooks
     pkgs.quarto
     pkgs.obsidian
+    # LaTeX
+    pkgs.texliveSmall #if needed _Medium,_Full
     # Computer statistics utilities
     pkgs.mactop
     pkgs.fastfetch
@@ -72,8 +81,6 @@
     pkgs.wireguard-tools
     # Syncing
     pkgs.syncthing
-    # LaTeX
-    pkgs.texliveSmall #if needed _Medium,_Full
     # Useful cmds
     pkgs.tree
     pkgs.wget
