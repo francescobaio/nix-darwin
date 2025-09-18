@@ -64,16 +64,13 @@
     dock.tilesize = 30; # default = 64
     dock.magnification = true;
     dock.persistent-apps = [
-      "/System/Applications/Launchpad.app"
-      "/Applications/Brave Browser.app"
-      "/Applications/Librewolf.app"
-      "/Applications/WezTerm.app"
-      "/Applications/Visual Studio Code.app"
       "/System/Applications/Mail.app"
+      "/System/Applications/Utilities/Terminal.app"
+      "/Applications/WezTerm.app"
+      "/Applications/Brave Browser.app"
+      "/Applications/Vivaldi.app"
+      "/Applications/Librewolf.app"
       "/System/Applications/Calendar.app"
-      "/System/Applications/System Settings.app"
-      "/Applications/Obsidian.app"
-      "/Applications/Claude.app/"
       "/Applications/Bitwarden.app"
       {
         spacer = {
