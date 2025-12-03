@@ -68,7 +68,6 @@
       "/System/Applications/Utilities/Terminal.app"
       "/Applications/WezTerm.app"
       "/Applications/Brave Browser.app"
-      "/Applications/Vivaldi.app"
       "/Applications/Librewolf.app"
       "/System/Applications/Calendar.app"
       "/Applications/Bitwarden.app"
