@@ -3,9 +3,13 @@
   # vars used in shell config file (.zshrc, ...)
   environment.variables =
   {
-    ZSH_FZF_TAB_ROOT = "${pkgs.zsh-fzf-tab}";
-    ZSH_SYNTAX_HIGHLIGHTING_ROOT = "${pkgs.zsh-syntax-highlighting}";
-    ZSH_AUTOSUGGESTIONS_ROOT = "${pkgs.zsh-autosuggestions}";
+		ZSH_FZF_TAB_ROOT = "${pkgs.zsh-fzf-tab}";
+		ZSH_SYNTAX_HIGHLIGHTING_ROOT = "${pkgs.zsh-syntax-highlighting}";
+		ZSH_AUTOSUGGESTIONS_ROOT = "${pkgs.zsh-autosuggestions}";
+		OPEN_BLAS = "${pkgs.openblas}";
+		OPEN_BLAS_INCLUDE = "${pkgs.openblas.dev}/include";
+		CC="/usr/bin/clang";
+		CXX="/usr/bin/clang++";
   };
   programs.bash = {
     enable = true;
@@ -31,7 +35,7 @@
     enableFzfGit = true;
     enableFzfHistory = true;
   };
-# In the current setting, as dotfiles are not managed by nix, tmux source ~/
+  # In the current setting, as dotfiles are not managed by nix, tmux source ~/
   programs.tmux = {
     enable = true;
     enableFzf = true;
