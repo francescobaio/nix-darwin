@@ -6,6 +6,7 @@
   environment.systemPackages = [
     # GPG/SSH
     pkgs.openssh
+    pkgs.sshpass
     pkgs.gnupg
     pkgs.pinentry_mac
     # git
@@ -26,11 +27,17 @@
     pkgs.gfortran14
     pkgs.gnumake
     pkgs.cmake
-    pkgs.fortran-fpm
+    pkgs.openblas
     # Zig
     pkgs.zig
     # go
     pkgs.go
+    # julia
+    pkgs.julia-bin
+    # minizinc
+    pkgs.minizinc
+    # R and packages
+    pkgs.R
     # python
     pkgs.python313
     pkgs.uv
@@ -58,7 +65,7 @@
     pkgs.tmux
     # cli password manager
     pkgs.pass
-    # email
+    # email (neomutt + deps)
     pkgs.neomutt
     pkgs.abook
     pkgs.notmuch
@@ -73,7 +80,7 @@
     pkgs.quarto
     # Typesetting programs
     pkgs.typst
-    pkgs.texliveSmall #if needed _Medium,_Full
+    pkgs.texliveMedium #if needed _Medium,_Full
     # Computer statistics utilities
     pkgs.mactop
     pkgs.fastfetch
@@ -81,13 +88,22 @@
     pkgs.zotero
     # VPN
     pkgs.wireguard-tools
+    pkgs.openvpn
     # Syncing
     pkgs.syncthing
     # Static website generator
     pkgs.hugo
+    # Dart SASS (hugo chicago7 theme)
+    pkgs.dart-sass
     # sr.ht cli
     pkgs.hut
-    # Useful cmds
+    # firmware/embedded
+    pkgs.dfu-util
+    # image/video handling
+    pkgs.ffmpeg
+    # encrypted backup
+    pkgs.rclone
+    # shell utilities
     pkgs.tree
     pkgs.wget
     pkgs.scc
