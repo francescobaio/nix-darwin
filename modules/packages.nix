@@ -72,6 +72,8 @@
     pkgs.lynx
     pkgs.isync
     pkgs.msmtp
+    # email client for code reviews
+    pkgs.aerc
     # Graph visualization tools
     pkgs.graphviz
     # Local LLM inference interface
