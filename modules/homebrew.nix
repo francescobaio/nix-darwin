@@ -14,8 +14,6 @@
       "fpm"
     ];
     casks = [
-      # sshfs mount from remote server
-      "macfuse"
       # audio loopback driver
       "blackhole-64ch"
       "obs"
@@ -40,13 +38,13 @@
       "microsoft-teams"
       # LLMS
       "claude"
-      "whatsapp"
       "telegram"
       # VPN
       "nordvpn"
       # Browsers
       "brave-browser"
       "librewolf"
+      "zen"
       "tor-browser"
       # email
       "proton-mail-bridge"
@@ -59,6 +57,7 @@
       "raspberry-pi-imager"
       # OpenVPN client
       "tunnelblick"
+      "localsend"
     ];
     masApps = {
       # Add Mac App Store apps here
@@ -66,7 +65,7 @@
       "Wireguard" = 1451685025;
       "HP" = 1474276998;
       "The Unarchiver" = 425424353;
-      "Xcode" = 497799835;
+      # "Xcode" = 497799835;
       #TODO Proton Authenticator yet to packaged
     };
     # onActivation.cleanup = "zap";
