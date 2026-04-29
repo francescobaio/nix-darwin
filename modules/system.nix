@@ -9,7 +9,7 @@
   # nix.linux-builder.enable = true;
   
   nixpkgs.hostPlatform = "aarch64-darwin";
-  system.primaryUser = "niccolozanotti";
+  system.primaryUser = "francescobaiocchi";
   
   # Used for backwards compatibility
   system.stateVersion = 6;
@@ -20,7 +20,7 @@
     env = pkgs.buildEnv {
       name = "system-applications";
       paths = config.environment.systemPackages;
-      pathsToLink = [ "/Applications" ];
+      pathsToLink = "/Applications";
     };
   in
     # alias nix-installed apps to /Applications (for indexing, etc ...)
@@ -56,7 +56,7 @@
     dock.autohide-time-modifier = 0.5;
     dock.mru-spaces = false;
     dock.minimize-to-application = true;
-    dock.orientation = "left";
+    dock.orientation = "bottom";
     dock.expose-group-apps = true;
     dock.show-recents = false;
     dock.showhidden = true;
@@ -68,16 +68,14 @@
       "/System/Applications/Utilities/Terminal.app"
       "/Applications/WezTerm.app"
       "/Applications/Brave Browser.app"
-      "/Applications/Librewolf.app"
       "/System/Applications/Calendar.app"
-      "/Applications/Bitwarden.app"
       {
         spacer = {
           small = true;
         };
       }
       {
-        folder = "/Users/niccolozanotti/Downloads/";
+        folder = "/Users/francescobaiocchi/Downloads/";
       }
     ];
 

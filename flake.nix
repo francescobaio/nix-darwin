@@ -1,5 +1,5 @@
 {
-  description = "@niccolozanotti's AppleSilicon mac nix-darwin system flake";
+  description = "@francescobaiocchi's AppleSilicon mac nix-darwin system flake";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
@@ -12,7 +12,7 @@
   let
     modules = import ./modules;
   in {
-    darwinConfigurations."macbook-pro14" = nix-darwin.lib.darwinSystem {
+    darwinConfigurations."macbook-pro14-fra" = nix-darwin.lib.darwinSystem {
       modules = [
         modules.system
         modules.packages
@@ -24,7 +24,7 @@
           nix-homebrew = {
             enable = true;
             enableRosetta = true;
-            user = "niccolozanotti";
+            user = "francescobaiocchi";
             autoMigrate = true;
           };
           # Set Git commit hash for darwin-version

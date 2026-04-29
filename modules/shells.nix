@@ -3,11 +3,11 @@
   # vars used in shell config file (.zshrc, ...)
   environment.variables =
   {
-		ZSH_FZF_TAB_ROOT = "${pkgs.zsh-fzf-tab}";
-		ZSH_SYNTAX_HIGHLIGHTING_ROOT = "${pkgs.zsh-syntax-highlighting}";
-		ZSH_AUTOSUGGESTIONS_ROOT = "${pkgs.zsh-autosuggestions}";
-		OPEN_BLAS = "${pkgs.openblas}";
-		OPEN_BLAS_INCLUDE = "${pkgs.openblas.dev}/include";
+		# ZSH_FZF_TAB_ROOT = "${pkgs.zsh-fzf-tab}";
+		# ZSH_SYNTAX_HIGHLIGHTING_ROOT = "${pkgs.zsh-syntax-highlighting}";
+		# ZSH_AUTOSUGGESTIONS_ROOT = "${pkgs.zsh-autosuggestions}";
+		# OPEN_BLAS = "${pkgs.openblas}";
+		# OPEN_BLAS_INCLUDE = "${pkgs.openblas.dev}/include";
 		CC="/usr/bin/clang";
 		CXX="/usr/bin/clang++";
   };
